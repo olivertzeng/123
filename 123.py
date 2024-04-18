@@ -424,7 +424,7 @@ while running:
         (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
     )
     creditSurface = creditFont.render(CREDIT, True, creditShow)
-    gameIsStarted = False
+    game_inproccess = False
     unlocked = [True, True, True]
     slap = False
     slapIndex = 0
@@ -439,7 +439,7 @@ while running:
         hand.index = 2
     pg.mixer.music.play()
 
-    while not gameIsStarted:
+    while not game_inproccess:
         clock.tick(20)
         for event in pg.event.get():
             if event.type == QUIT:
@@ -448,7 +448,7 @@ while running:
                 os._exit(0)
             if event.type == KEYDOWN:
                 if event.key == K_SPACE:
-                    gameIsStarted = True
+                    game_inproccess = True
                     pg.time.set_timer(TIME, 1000)
                     break
                 if event.key == K_c:
@@ -521,7 +521,7 @@ while running:
         )
         pg.display.flip()
 
-    while gameIsStarted:
+    while game_inproccess:
         clock.tick(30)
         num = 0
         generate = False
@@ -550,7 +550,7 @@ while running:
                 if timer.timeCount > 0:
                     timer.update()
                 else:
-                    gameIsStarted = False
+                    game_inproccess = False
                     timeEnd = True
                 if timer.timeCount == 3:
                     pg.event.clear(TBCEREND)
