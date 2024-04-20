@@ -14,13 +14,13 @@ class enemy(pg.sprite.Sprite):
         self.images = []
         self.images.append(
             pg.transform.scale(
-                pg.image.load("123/1.png"),
+                pg.image.load("123/123/1.png"),
                 (int(170 * screen_radio), int(170 * screen_radio)),
             )
         )
         self.images.append(
             pg.transform.scale(
-                pg.image.load("123/2.png"),
+                pg.image.load("123/123/2.png"),
                 (int(170 * screen_radio), int(170 * screen_radio)),
             )
         )
@@ -77,19 +77,19 @@ class hand(pg.sprite.Sprite):
         self.images = []
         self.images.append(
             pg.transform.scale(
-                pg.image.load("hand/1.png"),
+                pg.image.load("123/hand/1.png"),
                 (int(91 * screen_radio), int(132 * screen_radio)),
             )
         )
         self.images.append(
             pg.transform.scale(
-                pg.image.load("hand/2.png"),
+                pg.image.load("123/hand/2.png"),
                 (int(126 * screen_radio), int(154 * screen_radio)),
             )
         )
         self.images.append(
             pg.transform.scale(
-                pg.image.load("hand/3.png"),
+                pg.image.load("123/hand/3.png"),
                 (int(139 * screen_radio), int(144 * screen_radio)),
             )
         )
@@ -150,13 +150,13 @@ class endScore(pg.sprite.Sprite):
         self.images = []
         self.images.append(
             pg.transform.scale(
-                pg.image.load("bg/endbg1.png"),
+                pg.image.load("123/bg/endbg1.png"),
                 (int(510 * screen_radio), int(1020 * screen_radio)),
             )
         )
         self.images.append(
             pg.transform.scale(
-                pg.image.load("bg/endbg2.png"),
+                pg.image.load("123/bg/endbg2.png"),
                 (int(510 * screen_radio), int(1020 * screen_radio)),
             )
         )
@@ -210,7 +210,7 @@ class ricardo(pg.sprite.Sprite):
         self.index = 0
         for i in range(1, 19):
             self.images.append(
-                pg.transform.scale2x(pg.image.load("ricardo/%d.png" % i))
+                pg.transform.scale2x(pg.image.load("123/ricardo/%d.png" % i))
             )
         self.image = pg.transform.scale(
             self.images[self.index],
@@ -247,7 +247,7 @@ class mountainDew(pg.sprite.Sprite):
         self.images = []
         self.index = 0
         for i in range(1, 9):
-            self.images.append(pg.image.load("mountaindew/%d.png" % i))
+            self.images.append(pg.image.load("123/mountaindew/%d.png" % i))
         self.image = pg.transform.scale(
             self.images[self.index], (int(150 * screen_radio), int(150 * screen_radio))
         )
@@ -296,7 +296,7 @@ class frog(pg.sprite.Sprite):
         for i in range(1, 11):
             self.images.append(
                 pg.transform.scale(
-                    pg.image.load("mlg_frog/frogpics/%d.png" % i),
+                    pg.image.load("123/mlg_frog/frogpics/%d.png" % i),
                     (int(210 * screen_radio), int(183 * screen_radio)),
                 )
             )
@@ -372,11 +372,11 @@ ricardo = ricardo()
 startbg = pg.Surface(screen.get_size())
 startbg.fill((255, 255, 255))
 startbgHead = pg.transform.scale(
-    pg.image.load("bg/startbg.png"), (int(291 * screen_radio), int(494 * screen_radio))
+    pg.image.load("123/bg/startbg.png"), (int(291 * screen_radio), int(494 * screen_radio))
 )
 bg = pg.Surface(screen.get_size())
 bg = pg.transform.scale(
-    pg.image.load("bg/bg.jpg"), (int(510 * screen_radio), int(1020 * screen_radio))
+    pg.image.load("123/bg/bg.jpg"), (int(510 * screen_radio), int(1020 * screen_radio))
 )
 bg = bg.convert()
 startbg = startbg.convert()
