@@ -400,7 +400,7 @@ high_score = highscore.read()
 
 running = True
 while running:
-    pg.mixer.music.load("music/begin.mp3")
+    pg.mixer.music.load("123/music/begin.mp3")
     newhigh_score = False
     pg.event.clear(TBCEREND)
     all_sprites.remove(enemies)
